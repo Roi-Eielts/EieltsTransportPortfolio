@@ -1,0 +1,29 @@
+$blueColor: #1B9F97;
+$borderLine: #D2AE90;
+$textGold: #D2AE90;
+
+.txt-blue {
+    color: $blueColor !important;
+}
+
+.mainButtons {
+    border-radius: 5px;
+    background-color: $blueColor;
+}
+
+.txt-gold {
+    color: $textGold !important;
+}
+
+.txt-gold-header {
+    font-size: 60px;
+    color: $textGold !important;
+}
+
+.border-gold-bottom {
+    border-bottom: solid 3px $borderLine;
+}
+
+.fs-45 {
+    font-size: 30px;
+}
