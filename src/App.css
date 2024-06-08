@@ -10,6 +10,10 @@
   background: linear-gradient(var(--divDarkBackground), white);
   height:50px;
 }
+#invertedFadeDivDark {
+  background: linear-gradient(white, var(--divDarkBackground));
+  height:50px;
+}
 
 .navbar-toggler-icon {
   color: white !important;
