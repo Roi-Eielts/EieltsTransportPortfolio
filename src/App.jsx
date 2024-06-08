@@ -114,12 +114,12 @@ function App() {
           <div className="w-75 mt-2">
             <p>Eielts transport staat altijd klaar voor u om contact op te nemen per email en mits mogelijk per telefoon. Let hier wel bij op dat Eielts transport niet altijd kan opnemen.</p>
             <p className='fw-bold mt-4 mb-0 pb-0 '>Eielts transport</p>
-            <p className='mb-0 pb-0 mt-0 pt-0'>Arendhof 33</p>
-            <p className='mb-0 pb-0 mt-0 pt-0'>4451EB Heinkenszand</p>
+            <p className='mb-0 pb-0 mt-0 pt-0'>straatnaam 12</p>
+            <p className='mb-0 pb-0 mt-0 pt-0'>locatie in de wereld</p>
             <p className='mb-0 pb-0 mt-4'><u>31+ 06 123456789</u></p>
-            <p className='mb-0 pb-0 mt-0 pt-0'><u>EieltsTransport@hetnet.nl</u></p>
+            <p className='mb-0 pb-0 mt-0 pt-0'><u>email@mail.nl</u></p>
             <p className='mb-0 pb-0 mt-0 pt-0'><u>www.eieltsTransport.nl</u></p>
-            <p className='fst-italic mt-4 mb-0 pb-0'>contact pers. Harry Eielts</p>
+            <p className='fst-italic mt-4 mb-0 pb-0'>contact pers. abc</p>
             <p className='mt-4 mb-0 pb-0'>BTW: 123456789</p>
             <p className='mt-4 mb-0 pb-0'>KVK: 123456</p>
           </div>
