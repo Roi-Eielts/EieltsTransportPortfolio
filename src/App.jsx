@@ -8,14 +8,31 @@ import { useState } from 'react';
 
 // import images
 import homeTruck from './images/HomeTruck.png';
-import firstTruck from './images/FirstTruck.jpg';
-import secondTruck from './images/secondTruck.jpg';
-import thirdTruck from './images/thirdTrucks.jpg';
-import FirstTruckAlone from './images/FirstTruckAlone.jpg';
-import firstMAN from './images/FirstMAN.jpg';
-import firstWhiteMAN from './images/firstWhiteMAN.jpg';
-import blackTruck from './images/truck_afbeelding2.png';
-import mijlpaal2000 from './images/mijlpaal2000.jpg';
+import _1970 from './images/1970-1980/FirstTruck.jpg';
+import img_1980_1 from './images/1980-1990/1980-1990_1.jpg';
+import img_1980_2 from './images/1980-1990/1980-1990_2.jpg';
+import img_1980_3 from './images/1980-1990/1980-1990_3.jpg';
+import img_1990 from './images/1990-2000/thirdTrucks.jpg';
+import mijlpaal2000 from './images/2000-2010/mijlpaal2000.jpg';
+import img_2010_1_1 from './images/2010-2015/2010-2015_1_1.jpg';
+import img_2010_1_2 from './images/2010-2015/2010-2015_1_2.jpg';
+import img_2010_2 from './images/2010-2015/2010-2015_2.jpg';
+import img_2010_3 from './images/2010-2015/2010-2015_3.jpg';
+
+import img_2015_1 from './images/2015-heden/2015_1.jpg';
+import img_2015_2 from './images/2015-heden/2015_2.jpg';
+import img_2015_3 from './images/2015-heden/2015_3.jpg';
+import img_2015_4 from './images/2015-heden/2015_4.jpg';
+import img_2015_5 from './images/2015-heden/2015_5.jpg';
+import img_2015_6 from './images/2015-heden/2015_6.jpg';
+import img_2015_7 from './images/2015-heden/2015_7.jpg';
+import img_2015_8 from './images/2015-heden/2015_8.jpg';
+import img_2015_9 from './images/2015-heden/2015_9.jpg';
+import img_2015_10 from './images/2015-heden/2015_10.jpg';
+import img_2015_11 from './images/2015-heden/2015_11.jpg';
+import img_2015_12 from './images/2015-heden/2015_12.jpg';
+import img_2015_13 from './images/2015-heden/2015_13.png';
+import img_2015_14 from './images/2015-heden/2015_14.jpg';
 
 function App() {
   const [companyName, setCompanyName] = useState('')
@@ -125,7 +142,7 @@ function App() {
         <div className='d-flex flex-column align-items-center'>
           <h1 className='text-center'>Over Eielts transport</h1>
           <p className='w-75 mt-2'>
-          Welkom bij Eielts Transport, gevestigd in Heinkenszand. Voor persoonlijk contact kunt u naar de sectie 'Contact' gaan. Wilt u liever een offerte aanvragen? Dan kunt u naar de sectie 'Offerte' navigeren. Bent u geïnteresseerd in onze geschiedenis? Dan kunt u hieronder de sectie 'Geschiedenis' bekijken.
+            Welkom bij Eielts Transport, gevestigd in Heinkenszand. Voor persoonlijk contact kunt u naar de sectie 'Contact' gaan. Wilt u liever een offerte aanvragen? Dan kunt u naar de sectie 'Offerte' navigeren. Bent u geïnteresseerd in onze geschiedenis? Dan kunt u hieronder de sectie 'Geschiedenis' bekijken.
           </p>
         </div>
       </div>
@@ -138,13 +155,13 @@ function App() {
             <>
               <div className='row w-75 mt-3'>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={firstTruck} alt='afbeelding vrachtwagen' />
+                  <img className='w-100 h-100 rounded' src={_1970} alt='afbeelding vrachtwagen' />
                 </div>
                 <div className='col-md-8 d-flex align-items-center'>
                   <div>
                     <h1 className='w-100'>1971</h1>
                     <h3>Start bedrijf</h3>
-                    <p className='mt-2'>Eielts transport werd opgericht door de inmiddels overleden Harry Eielts sr., een visionair ondernemer met een passie voor innovatie en kwaliteit.                 </p>
+                    <p className='mt-2'>Eielts transport werd opgericht door de inmiddels overleden Harry Eielts sr. die graag voor kwaliteit ging in het multimodaal goederenvervoer</p>
                   </div>
                 </div>
               </div>
@@ -153,22 +170,42 @@ function App() {
                 <div className='col-md-8 d-flex align-items-center flex-row-reverse'>
                   <div className=''>
                     <h2 className='text-end'>±1980</h2>
-                    <p className='mt-2 float-end'>In het begin van de jaren '80 werd het dienstenaanbod van ons bedrijf uitgebreid met koel- en vriesttransport.</p>
+                    <p className='mt-2 float-end'>In het begin van de jaren '80 werd het dienstenaanbod van ons bedrijf uitgebreid vanuit het multimodaaal goederenvervoer met koel- en vriesttransport.</p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={secondTruck} alt='afbeelding vrachtwagen' />
+                  <div id="1980Carrousel" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={img_1980_1} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_1980_2} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_1980_3} className="d-block w-100 rounded mb-1" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#1980Carrousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
+                      <button className="carousel-control-next" type="button" data-bs-target="#1980Carrousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* truck 3 */}
               <div className='row w-75 mt-3'>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={thirdTruck} alt='afbeelding vrachtwagen' />
+                  <img className='w-100 h-100 rounded' src={img_1990} alt='afbeelding vrachtwagen' />
                 </div>
                 <div className='col-md-8 d-flex align-items-center'>
                   <div>
                     <h1 className='w-100'>±1990</h1>
-                    <p className='mt-2'>In 1990 werd ons bedrijf omgezet in een Vennootschap Onder Firma (V.O.F.). 
+                    <p className='mt-2'>In 1990 werd Eielts transport omgezet in een Vennootschap Onder Firma (V.O.F.).
                     </p>
                   </div>
                 </div>
@@ -178,22 +215,45 @@ function App() {
                 <div className='col-md-8 d-flex align-items-center flex-row-reverse'>
                   <div>
                     <h1 className='w-100 text-end'>±2000</h1>
-                    <p className='mt-2'>Rond de eeuwwisseling besloot de huidige eigenaar van Eielts transport voort te zetten als zelfstandig rijder. </p>
+                    <p className='mt-2'>Rond de eeuwwisseling besloot de Harry Eielts sr. te stoppen en is Harry Eielts jr. voort te gaan als zelfstandig rijder voor Eielts transport. </p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
                   <img className='w-100 h-100 rounded' src={mijlpaal2000} alt='afbeelding vrachtwagen' />
                 </div>
               </div>
-              {/* truck 5 */}
+              {/*  truck 5 */}
               <div className='row w-75 mt-3'>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={firstMAN} alt='afbeelding vrachtwagen' />
+                  <div id="2010Carrousel" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={img_2010_1_1} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2010_1_2} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2010_2} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2010_3} className="d-block w-100 rounded mb-1" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#2010Carrousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
+                      <button className="carousel-control-next" type="button" data-bs-target="#2010Carrousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div className='col-md-8 d-flex align-items-center'>
                   <div>
                     <h1 className='w-100'>±2010</h1>
-                    <p className='mt-2'>Hierbij is de oude vrachtwagen komen te vervallen en is vervangen door een nieuwe blauwe vrachtwaren waar ik veel plezier mee had.
+                    <p className='mt-2'>In 2010 is de oude vrachtwagen van het ±1990/±2000 vervangen door een nieuwe blauwe vrachtwaren waar ik veel plezier mee had.
                     </p>
                   </div>
                 </div>
@@ -203,25 +263,61 @@ function App() {
                 <div className='col-md-8 d-flex align-items-center flex-row-reverse'>
                   <div>
                     <h1 className='w-100 text-end'>±2015 - heden</h1>
-                    <p className='mt-2'>Hierna zijn er 3 auto's gekomen de witte man als eerste en de 2 in aparte kleuren zijn opvolgend in de jaren waarbij ik van de 3de nog geen foto heb.</p>
+                    <p className='mt-2'>Hierna zijn er 3 auto's gekomen de witte man als eerste en de 2 in aparte kleuren zijn opvolgend in de jaren.</p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src={firstWhiteMAN} class="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                  <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={img_2015_1} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
                       </div>
-                      <div class="carousel-item">
-                        <img src={blackTruck} class="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      <div className="carousel-item">
+                        <img src={img_2015_2} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
                       </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                      <div className="carousel-item">
+                        <img src={img_2015_3} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_4} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_5} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_6} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_7} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_8} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_9} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_10} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_11} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_12} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_13} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_14} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
                       </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
                       </button>
                     </div>
                   </div>
@@ -235,11 +331,11 @@ function App() {
                   <div>
                     <h1 className='w-100'>1971</h1>
                     <h3>Start bedrijf</h3>
-                    <p className='mt-2'>Het bedrijf werd opgericht door de inmiddels overleden Harry Eielts sr., een visionair ondernemer met een passie voor innovatie en kwaliteit. </p>
+                    <p className='mt-2'>Eielts transport werd opgericht door de inmiddels overleden Harry Eielts sr. die graag voor kwaliteit ging in het multimodaal goederenvervoer</p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-75 rounded' src={firstTruck} alt='afbeelding vrachtwagen' />
+                  <img className='w-100 h-100 rounded' src={_1970} alt='afbeelding vrachtwagen' />
                 </div>
               </div>
               {/* truck 2 */}
@@ -247,24 +343,45 @@ function App() {
                 <div className='col-md-8 d-flex align-items-center flex-row-reverse'>
                   <div className=''>
                     <h2 className='text-end'>±1980</h2>
-                    <p className='mt-2 float-end'>In het begin van de jaren '80 werd het dienstenaanbod van het bedrijf uitgebreid met koel- en vriesttransport.</p>
+                    <p className='mt-2 float-end'>In het begin van de jaren '80 werd het dienstenaanbod van ons bedrijf uitgebreid vanuit het multimodaaal goederenvervoer met koel- en vriesttransport.</p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={secondTruck} alt='afbeelding vrachtwagen' />
+                  <div id="1980Carrousel" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={img_1980_1} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_1980_2} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_1980_3} className="d-block w-100 rounded mb-1" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#1980Carrousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
+                      <button className="carousel-control-next" type="button" data-bs-target="#1980Carrousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* truck 3 */}
               <div className='row w-75 mt-3'>
+
                 <div className='col-md-8 d-flex align-items-center'>
                   <div>
                     <h1 className='w-100'>±1990</h1>
-                    <p className='mt-2'>In 1990 werd het bedrijf omgezet in een Vennootschap Onder Firma (V.O.F.), een belangrijke stap in de professionele ontwikkeling en groei van het bedrijf. 
+                    <p className='mt-2'>In 1990 werd Eielts transport omgezet in een Vennootschap Onder Firma (V.O.F.).
                     </p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={thirdTruck} alt='afbeelding vrachtwagen' />
+                  <img className='w-100 h-100 rounded' src={img_1990} alt='afbeelding vrachtwagen' />
                 </div>
               </div>
               {/* truck 4 */}
@@ -272,23 +389,47 @@ function App() {
                 <div className='col-md-8 d-flex align-items-center flex-row-reverse'>
                   <div>
                     <h1 className='w-100 text-end'>±2000</h1>
-                    <p className='mt-2'>Rond de eeuwwisseling besloot de huidige eigenaar het bedrijf voort te zetten als zelfstandig rijder. </p>
+                    <p className='mt-2'>Rond de eeuwwisseling besloot de Harry Eielts sr. te stoppen en is Harry Eielts jr. voort te gaan als zelfstandig rijder voor Eielts transport. </p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
                   <img className='w-100 h-100 rounded' src={mijlpaal2000} alt='afbeelding vrachtwagen' />
                 </div>
               </div>
-              {/* truck 5 */}
+              {/*  truck 5 */}
               <div className='row w-75 mt-3'>
                 <div className='col-md-8 d-flex align-items-center'>
                   <div>
                     <h1 className='w-100'>±2010</h1>
-                    <p className='mt-2'>Hierbij is de oude vrachtwagen komen te vervallen en is vervangen door een nieuwe blauwe vrachtwaren waar ik veel plezier mee had.</p>
+                    <p className='mt-2'>In 2010 is de oude vrachtwagen van het ±1990/±2000 vervangen door een nieuwe blauwe vrachtwaren waar ik veel plezier mee had.
+                    </p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <img className='w-100 h-100 rounded' src={firstMAN} alt='afbeelding vrachtwagen' />
+                  <div id="2010Carrousel" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={img_2010_1_1} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2010_1_2} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2010_2} className="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2010_3} className="d-block w-100 rounded mb-1" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#2010Carrousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
+                      <button className="carousel-control-next" type="button" data-bs-target="#2010Carrousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* truck 6 */}
@@ -296,25 +437,61 @@ function App() {
                 <div className='col-md-8 d-flex align-items-center flex-row-reverse'>
                   <div>
                     <h1 className='w-100 text-end'>±2015 - heden</h1>
-                    <p className='mt-2'>Hierna zijn er 3 auto's gekomen de witte man als eerste en de 2 in aparte kleuren zijn opvolgend in de jaren waarbij ik van de 3de nog geen foto heb.</p>
+                    <p className='mt-2'>Hierna zijn er 3 auto's gekomen de witte man als eerste en de 2 in aparte kleuren zijn opvolgend in de jaren.</p>
                   </div>
                 </div>
                 <div className='col-md-4 ps-3 pe-2'>
-                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src={firstWhiteMAN} class="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                  <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={img_2015_1} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
                       </div>
-                      <div class="carousel-item">
-                        <img src={blackTruck} class="d-block w-100 rounded" alt="Afbeelding vrachtwagen" />
+                      <div className="carousel-item">
+                        <img src={img_2015_2} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
                       </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                      <div className="carousel-item">
+                        <img src={img_2015_3} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_4} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_5} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_6} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_7} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_8} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_9} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_10} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_11} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_12} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_13} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <div className="carousel-item">
+                        <img src={img_2015_14} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
                       </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
                       </button>
                     </div>
                   </div>
@@ -334,12 +511,12 @@ function App() {
             <p className='fw-bold mt-4 mb-0 pb-0 '>Eielts transport</p>
             <p className='mb-0 pb-0 mt-0 pt-0'>Arendhof 33</p>
             <p className='mb-0 pb-0 mt-0 pt-0'>4451EB Heinkenszand</p>
-            <p className='mb-0 pb-0 mt-4'><u>31+ 06 123456789</u></p>
+            <p className='mb-0 pb-0 mt-4'><u>+31 06 53887033</u></p>
             <p className='mb-0 pb-0 mt-0 pt-0'><u>eielts@hetnet.nl</u></p>
             <p className='mb-0 pb-0 mt-0 pt-0'><u>www.eieltsTransport.nl</u></p>
             <p className='fst-italic mt-4 mb-0 pb-0'>contact pers. Harry Eielts</p>
-            <p className='mt-4 mb-0 pb-0'>BTW: 123456789</p>
-            <p className='mt-4 mb-0 pb-0'>KVK: 123456</p>
+            {/* <p className='mt-4 mb-0 pb-0'>BTW: 123456789</p>
+            <p className='mt-4 mb-0 pb-0'>KVK: 123456</p> */}
           </div>
         </div>
       </div>
