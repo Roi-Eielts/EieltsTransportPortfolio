@@ -42,6 +42,13 @@ function App() {
   const [message, setMessage] = useState('')
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
+  const images2015 = [
+    img_2015_1, img_2015_2, img_2015_3, img_2015_4, img_2015_5, img_2015_6,
+    img_2015_7, img_2015_8, img_2015_9, img_2015_10, img_2015_11, img_2015_12,
+    img_2015_13, img_2015_14
+  ];
+
+
   const setContactFormNull = () => {
     setCompanyName('')
     setPhoneNumber('')
@@ -631,65 +638,22 @@ function App() {
             <div className='col-md-4 ps-3 pe-2'>
               <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <img src={img_2015_1} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
+                  <div className="carousel-inner">
+                    {images2015.map((img, index) => (
+                      <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                        <img src={img} className="d-block w-100 rounded" alt={`Afbeelding vrachtwagen ${index + 1}`} loading="lazy" />
+                      </div>
+                    ))}
                   </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_2} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_3} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_4} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_5} className="d-block w-100 object-fit-scale rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_6} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_7} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_8} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_9} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_10} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_11} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_12} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_13} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <div className="carousel-item">
-                    <img src={img_2015_14} className="d-block w-100  rounded" alt="Afbeelding vrachtwagen" />
-                  </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      {/* contact */}
-      <div id='contact' className="ms-5 mt-5 mb-5 d-flex justify-content-center">
+      {/* contact */ }
+      < div id = 'contact' className = "ms-5 mt-5 mb-5 d-flex justify-content-center" >
         <div className="d-flex flex-column align-items-center">
           <h1 className="text-center">Contact</h1>
           <div className="w-75 mt-2">
@@ -705,76 +669,76 @@ function App() {
             <p className='mt-4 mb-0 pb-0'>KVK: 123456</p> */}
           </div>
         </div>
-      </div>
-      <div id="invertedFadeDivDark" />
-      {/* Offerte */}
-      <div id='offerte' className="divDark pb-5">
-        <div className='d-flex justify-content-center align-items-center'>
-          <div className="w-75">
-            <form action="#">
-              <div className="d-flex flex-column">
-                <h1 className="text-center text-white">Offerte</h1>
-                <h2 className="text-center txt-blue">Uw gegevens</h2>
-              </div>
-              <div className="row d-flex justify-content-center mt-5">
-                <div className="col-md-6">
-                  <label htmlFor="companyName" className="fs-4 text-white p-0">Bedrijfsnaam:</label>
-                </div>
-                <div className="col-md-6">
-                  <input id="companyName" type="text" className="w-100" placeholder='Bedrijfsnaam' onChange={event => setCompanyName(event.target.value)} value={companyName} />
-                </div>
-              </div>
-              <div className="row d-flex justify-content-center mt-2">
-                <div className="col-md-6">
-                  <label htmlFor="phoneNumber" className="fs-4 text-white p-0" >Telefoonnummer <span className='text-danger fs-6'>(vereist)</span>: </label>
-                </div>
-                <div className="col-md-6">
-                  <input id="phoneNumber" type="text" className="w-100" placeholder='telefoonnummer' onChange={event => setPhoneNumber(event.target.value)} value={phoneNumber} required={true} />
-                </div>
-              </div>
-              <div className="row d-flex justify-content-center mt-2">
-                <div className="col-md-6">
-                  <label htmlFor="contactPerson" className="fs-4 text-white p-0">Contactpersoon <span className='text-danger fs-6'>(vereist)</span>: </label>
-                </div>
-                <div className="col-md-6">
-                  <input id='contactPerson' type='text' className='w-100' placeholder='Contactpersoon' onChange={event => setContactPerson(event.target.value)} value={contactPerson} required={true} />
-                </div>
-              </div>
-              <div className="row d-flex justify-content-center mt-2">
-                <div className="col-md-6">
-                  <label htmlFor="email" className="fs-4 text-white p-0">E-mailadres <span className='text-danger fs-6'>(vereist)</span>: </label>
-                </div>
-                <div className="col-md-6">
-                  <input id='email' type='email' className='w-100' placeholder='E-mailadres' onChange={event => setEmail(event.target.value)} value={email} required={true} />
-                </div>
-              </div>
-              <div className='mt-2 mb-5'>
-                <label htmlFor="message" className="fs-4 text-white p-0">Beschrijf uw wens <span className='text-danger fs-6'>(vereist)</span>: </label>
-                <textarea className='w-100 form-control min-height mt-2' placeholder='Zet hier het bericht wat u wilt verzenden' name="message" onChange={event => setMessage(event.target.value)} value={message} required={true}></textarea>
-              </div>
-              <div className="row d-flex justify-content-center mt-2">
-                {/* redo */}
-                <div className="col-md-6 d-flex justify-content-center mt-2">
-                  <button className='fs-5 fw-bold btn btn-danger' onClick={() => setContactFormNull()}>Leeg de invoervelden.</button>
-                </div>
-                <div className="col-md-6 d-flex justify-content-center ps-4 mt-2" onClick={() => sendMail()}>
-                  <button className='fs-5 fw-bold btn btn-eielts text-white' type='submit'>Verzend de offerte.</button>
-                </div>
-              </div>
-            </form>
+      </div >
+    <div id="invertedFadeDivDark" />
+  {/* Offerte */ }
+  <div id='offerte' className="divDark pb-5">
+    <div className='d-flex justify-content-center align-items-center'>
+      <div className="w-75">
+        <form action="#">
+          <div className="d-flex flex-column">
+            <h1 className="text-center text-white">Offerte</h1>
+            <h2 className="text-center txt-blue">Uw gegevens</h2>
           </div>
-        </div>
-        <div className="w-100 mt-5">
-          <button className="btn btn-eielts-to-top float-end"
-            onClick={() => {
-              var element = document.getElementById('top')
-              element.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            <FontAwesomeIcon icon={faArrowUpLong} size="xl" className='text-white' />
-          </button>
-        </div>
+          <div className="row d-flex justify-content-center mt-5">
+            <div className="col-md-6">
+              <label htmlFor="companyName" className="fs-4 text-white p-0">Bedrijfsnaam:</label>
+            </div>
+            <div className="col-md-6">
+              <input id="companyName" type="text" className="w-100" placeholder='Bedrijfsnaam' onChange={event => setCompanyName(event.target.value)} value={companyName} />
+            </div>
+          </div>
+          <div className="row d-flex justify-content-center mt-2">
+            <div className="col-md-6">
+              <label htmlFor="phoneNumber" className="fs-4 text-white p-0" >Telefoonnummer <span className='text-danger fs-6'>(vereist)</span>: </label>
+            </div>
+            <div className="col-md-6">
+              <input id="phoneNumber" type="text" className="w-100" placeholder='telefoonnummer' onChange={event => setPhoneNumber(event.target.value)} value={phoneNumber} required={true} />
+            </div>
+          </div>
+          <div className="row d-flex justify-content-center mt-2">
+            <div className="col-md-6">
+              <label htmlFor="contactPerson" className="fs-4 text-white p-0">Contactpersoon <span className='text-danger fs-6'>(vereist)</span>: </label>
+            </div>
+            <div className="col-md-6">
+              <input id='contactPerson' type='text' className='w-100' placeholder='Contactpersoon' onChange={event => setContactPerson(event.target.value)} value={contactPerson} required={true} />
+            </div>
+          </div>
+          <div className="row d-flex justify-content-center mt-2">
+            <div className="col-md-6">
+              <label htmlFor="email" className="fs-4 text-white p-0">E-mailadres <span className='text-danger fs-6'>(vereist)</span>: </label>
+            </div>
+            <div className="col-md-6">
+              <input id='email' type='email' className='w-100' placeholder='E-mailadres' onChange={event => setEmail(event.target.value)} value={email} required={true} />
+            </div>
+          </div>
+          <div className='mt-2 mb-5'>
+            <label htmlFor="message" className="fs-4 text-white p-0">Beschrijf uw wens <span className='text-danger fs-6'>(vereist)</span>: </label>
+            <textarea className='w-100 form-control min-height mt-2' placeholder='Zet hier het bericht wat u wilt verzenden' name="message" onChange={event => setMessage(event.target.value)} value={message} required={true}></textarea>
+          </div>
+          <div className="row d-flex justify-content-center mt-2">
+            {/* redo */}
+            <div className="col-md-6 d-flex justify-content-center mt-2">
+              <button className='fs-5 fw-bold btn btn-danger' onClick={() => setContactFormNull()}>Leeg de invoervelden.</button>
+            </div>
+            <div className="col-md-6 d-flex justify-content-center ps-4 mt-2" onClick={() => sendMail()}>
+              <button className='fs-5 fw-bold btn btn-eielts text-white' type='submit'>Verzend de offerte.</button>
+            </div>
+          </div>
+        </form>
       </div>
+    </div>
+    <div className="w-100 mt-5">
+      <button className="btn btn-eielts-to-top float-end"
+        onClick={() => {
+          var element = document.getElementById('top')
+          element.scrollIntoView({ behavior: 'smooth' })
+        }}
+      >
+        <FontAwesomeIcon icon={faArrowUpLong} size="xl" className='text-white' />
+      </button>
+    </div>
+  </div>
     </>
   )
 
